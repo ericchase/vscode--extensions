@@ -1,0 +1,46 @@
+{
+  "name": "sort-multiple-selections",
+  "version": "0.0.1",
+  "publisher": "ericchase",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericchase/vscode--extensions.git"
+  },
+  "displayName": "sort-multiple-selections",
+  "description": "sort multiple selections of text",
+  "license": "Apache-2.0",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "sort",
+    "multiple",
+    "selections"
+  ],
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "sort-selections",
+        "title": "ericchase: sort selections"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "sort-selections",
+          "when": "editorHasMultipleSelections"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "sort-selections",
+          "when": "editorHasMultipleSelections"
+        }
+      ]
+    }
+  },
+  "activationEvents": []
+}
